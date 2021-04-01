@@ -1,3 +1,4 @@
+
 /** 
 Given an array of integers and an integer k, find out whether there are two distinct indices i and 
 //j in the array such that nums[i] = nums[j] and the absolute difference between i and j is at most k.
@@ -23,6 +24,16 @@ Output: false
  * @param {number} k
  * @return {boolean}
  */
-const containsNearbyDuplicate = (nums: number[], k: number) => {};
+const containsNearbyDuplicate = (nums: number[], k: number) => {
+  let j = 1;
+  for (let i = 0; i < nums.length; i++){
+    const sum = nums[i] + nums[j];
+    if (sum === k){
+      return true;
+    }
+    j++;
+  }
+  return false;
+};
 
 export default containsNearbyDuplicate;
