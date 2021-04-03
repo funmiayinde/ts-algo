@@ -9,12 +9,5 @@
 //   anagrams('Hi there', 'Bye there') --> False
 
 const anagrams = (str1: string, str2: string): boolean => {
-  const lookup = {};
-
-  for (let i = 0; i < str1.length; i++) {
-    const letter = str1[i];
-
-    lookup[letter] ? lookup[letter]++ : (lookup[letter] = 1);
-  }
   return true;
 };
